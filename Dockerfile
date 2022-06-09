@@ -72,7 +72,6 @@ VOLUME [ "/sys/fs/cgroup" ]
 WORKDIR /var/www/html
 
 # download and run remaining setup entrypoint
-RUN curl -o /usr/local/bin/docker-entrypoint.sh -fL "https://raw.githubusercontent.com/docker-library/wordpress/master/latest/php7.4/apache/docker-entrypoint.sh"
 COPY docker-entrypoint.sh /usr/local/bin/
 RUN  chmod +x /usr/local/bin/docker-entrypoint.sh
 
